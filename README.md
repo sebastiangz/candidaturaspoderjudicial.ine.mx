@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Este proyecto desarrolla una metodología sistemática para evaluar la información para posible idoneidad de candidatos a puestos en el Poder Judicial de la Federación mediante el análisis automatizado de la información de sus currículos vitae consultable en el sitio: https://candidaturaspoderjudicial.ine.mx/ con corte al 18 de mayo de 2025 a las 20:00 hrs. El objetivo principal es poner en uso las TIC y proporcionar un marco referente consultable y transparente que facilite la comparación entre la información de candidatos, considerando múltiples factores relevantes para el desempeño judicial que puedan ser de utilidad antes de la selección en una urna.
+Este proyecto desarrolla una metodología sistemática para evaluar la información para posible idoneidad de candidatos a puestos en el Poder Judicial de la Federación mediante el análisis automatizado de sus currículos vitae (CVs) en formato PDF consultable en el sitio: https://candidaturaspoderjudicial.ine.mx/ con corte al 18 de mayo de 2025 a las 20:00 hrs. El objetivo principal es proporcionar un marco objetivo y transparente que facilite la comparación entre candidatos según el cargo al que aspiran (Ministro, Magistrado, Juez), integrando información de los documentos curriculares que facilite la comparación entre la información de candidatos, considerando múltiples factores que pudieran ser de utilidad antes de la selección en una urna.
 
 ## Metodología
 
@@ -23,18 +23,26 @@ Estos criterios fueron seleccionados considerando los requisitos establecidos pa
 
 ### Proceso de Análisis
 
-#### 1. Extracción de Información
+#### 1. Integración de Datos
 
-El proceso comienza con la extracción estructurada de información a partir de documentos PDF. Se implementó un sistema robusto de extracción que:
+El proceso comienza integrando dos fuentes de información complementarias:
 
-- Integración de las URLs de CV para el *Estado de Colima* en el portal: https://candidaturaspoderjudicial.ine.mx/ desde el archivo de Excel que genera el portal al seleccionar *Resultados por cargo* 
-- Procesa documentos con diferentes formatos y estructuras desde la nube y generar metadatos
-- Identifica secciones relevantes mediante análisis lingüístico
-- Extrae entidades nombradas y datos estructurados
-- Maneja excepciones y variaciones en la presentación de la información
-- Crear archivos temporales con la información identificada. 
+- **Base de datos existente (Excel)**: Contiene información estructurada sobre los candidatos, incluyendo su nombre, cargo al que aspiran (Ministro, Magistrado, Juez) y el Poder de la Unión correspondiente.
+  
+- **Currículos vitae (PDF)**: Documentos no estructurados que contienen la trayectoria completa de cada candidato.
 
-#### 2. Estructuración de Datos
+Esta combinación permite un análisis más completo al vincular el perfil del candidato con el cargo específico al que aspira.
+
+#### 2. Extracción de Información
+
+El sistema implementa técnicas avanzadas de procesamiento de lenguaje natural para extraer información relevante de los PDFs:
+
+- Utiliza reconocimiento de entidades nombradas (NER) para identificar datos personales
+- Aplica expresiones regulares y patrones lingüísticos para detectar secciones específicas
+- Implementa análisis de texto para determinar áreas de especialización
+- Estima años de experiencia a partir de la información temporal detectada
+
+#### 3. Estructuración de Datos
 
 La información extraída se organiza en categorías estandarizadas:
 
@@ -44,35 +52,33 @@ La información extraída se organiza en categorías estandarizadas:
 - **Producción académica**: Publicaciones, artículos, libros
 - **Competencias adicionales**: Idiomas, certificaciones, especialidades
 
-#### 3. Evaluación Cuantitativa
+#### 4. Evaluación Cuantitativa
 
-Se desarrolló un sistema de puntuación que:
+Se desarrolló un sistema de puntuación ponderada que considera:
 
-- Normaliza cada criterio en relación con el conjunto de candidatos
-- Aplica ponderaciones específicas según la importancia relativa
-- Calcula una puntuación total sobre 100 puntos
-- Proporciona explicaciones detalladas de cada componente de la puntuación
+- La relevancia de cada criterio para el cargo específico (diferenciando entre Ministro, Magistrado y Juez)
+- La normalización de indicadores para permitir comparaciones equitativas
+- La aplicación de ponderaciones basadas en requisitos legales y mejores prácticas
 
-#### 4. Análisis Comparativo
+#### 5. Análisis Comparativo
 
-El sistema permite comparaciones multidimensionales entre candidatos mediante:
+El sistema permite múltiples niveles de comparación:
 
-- Clasificaciones por puntuación global
-- Análisis de fortalezas y debilidades relativas
-- Perfiles de competencias comparados
-- Correlaciones entre diferentes criterios de evaluación
+- Entre candidatos que aspiran al mismo cargo
+- Según criterios específicos (experiencia judicial, formación académica, etc.)
+- A través de visualizaciones que destacan fortalezas y áreas de oportunidad
 
 ## Resultados
 
 ### 1. Tablero de Clasificación
 
-El sistema genera un ranking completo de candidatos ordenados por puntuación, que incluye los principales indicadores:
+El sistema genera rankings completos de candidatos según el cargo al que aspiran (Ministro, Magistrado, Juez), permitiendo comparaciones más precisas entre perfiles similares:
 
-| Posición | Candidato | Puntuación | Nivel Educativo | Exp. Judicial | Años Exp. | Género |
-|----------|-----------|------------|-----------------|---------------|-----------|--------|
-| 1 | [Ejemplo] | 87.5 | 4 | 5 | 15 | M |
-| 2 | [Ejemplo] | 82.3 | 3 | 6 | 12 | F |
-| ... | ... | ... | ... | ... | ... | ... |
+| Candidato | Cargo | Poder | Puntuación | Nivel Educativo | Exp. Judicial | Años Exp. |
+|-----------|-------|-------|------------|-----------------|---------------|-----------|
+| [Candidato 1] | Magistrado | Judicial | 87.5 | 4 | 5 | 15 |
+| [Candidato 2] | Juez | Judicial | 82.3 | 3 | 6 | 12 |
+| [Candidato 3] | Ministro | Ejecutivo | 79.1 | 4 | 3 | 18 |
 
 ### 2. Visualizaciones Comparativas
 
