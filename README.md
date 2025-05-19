@@ -78,31 +78,31 @@ El sistema genera un ranking completo de candidatos ordenados por puntuación, q
 
 #### Desglose de Puntuación por Componentes
 
-![Desglose de Puntuación](/_images/competencias.png)
+![Desglose de Puntuación](/_images/competencias2.png)
 
 Este gráfico muestra la contribución de cada criterio a la puntuación total, permitiendo identificar las fortalezas específicas de cada candidato.
 
 #### Gráfico Radar de Competencias
 
-![Gráfico Radar](https://ejemplo.com/imagen_placeholder_radar.png)
+![Gráfico Radar](/_images/competencias-t5.png)
 
 Esta visualización permite comparar múltiples dimensiones simultáneamente entre los candidatos mejor calificados, facilitando la identificación de perfiles complementarios o especializados.
 
 #### Distribución por Género
 
-![Distribución por Género](https://ejemplo.com/imagen_placeholder_genero.png)
+![Distribución por Género](/_images/genero.png)
 
 Análisis de la distribución de puntuaciones por género, contribuyendo a la evaluación de equidad en el proceso de selección.
 
 #### Correlación entre Variables
 
-![Matriz de Correlación](https://ejemplo.com/imagen_placeholder_correlacion.png)
+![Matriz de Correlación](/_images/correlacion.png)
 
 Esta matriz revela relaciones entre diferentes criterios de evaluación, como la correlación entre nivel educativo y producción académica, o entre experiencia judicial y años totales de experiencia.
 
 #### Áreas de Especialización
 
-![Nube de Palabras](https://ejemplo.com/imagen_placeholder_especialidades.png)
+![Nube de Palabras](/_images/areascomunes.png)
 
 Visualización de las áreas de especialización más comunes entre los candidatos, identificando campos de expertise predominantes y subrepresentados.
 
