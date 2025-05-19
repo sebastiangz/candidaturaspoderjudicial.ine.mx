@@ -78,7 +78,7 @@ El sistema genera un ranking completo de candidatos ordenados por puntuación, q
 
 #### Desglose de Puntuación por Componentes
 
-![Desglose de Puntuación](https://ejemplo.com/imagen_placeholder_desglose.png)
+![Desglose de Puntuación](/_images/competencias.png)
 
 Este gráfico muestra la contribución de cada criterio a la puntuación total, permitiendo identificar las fortalezas específicas de cada candidato.
 
