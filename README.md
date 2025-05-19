@@ -27,7 +27,7 @@ Estos criterios fueron seleccionados considerando los requisitos establecidos pa
 
 El proceso comienza con la extracción estructurada de información a partir de documentos PDF. Se implementó un sistema robusto de extracción que:
 
-- Integración de las URLs de CV para el Estado de Colima en el portal: https://candidaturaspoderjudicial.ine.mx/ desde el archivo de Excel que genera el portal al seleccionar *Resultados por cargo* 
+- Integración de las URLs de CV para el *Estado de Colima* en el portal: https://candidaturaspoderjudicial.ine.mx/ desde el archivo de Excel que genera el portal al seleccionar *Resultados por cargo* 
 - Procesa documentos con diferentes formatos y estructuras desde la nube y generar metadatos
 - Identifica secciones relevantes mediante análisis lingüístico
 - Extrae entidades nombradas y datos estructurados
