@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Este proyecto desarrolla una metodología sistemática para evaluar la información para posible idoneidad de candidatos a puestos en el Poder Judicial de la Federación mediante el análisis automatizado de la información de sus currículos vitae consultable en el sitio: https://candidaturaspoderjudicial.ine.mx/. El objetivo principal es poner en uso las TICs y proporcionar un marco referente consultable y transparente que facilite la comparación entre la información de candidatos, considerando múltiples factores relevantes para el desempeño judicial que puedan ser de utilidad antes de la selección en una hurna.
+Este proyecto desarrolla una metodología sistemática para evaluar la información para posible idoneidad de candidatos a puestos en el Poder Judicial de la Federación mediante el análisis automatizado de la información de sus currículos vitae consultable en el sitio: https://candidaturaspoderjudicial.ine.mx/ con corte al 18 de mayo de 2025 a las 20:00 hrs. El objetivo principal es poner en uso las TICs y proporcionar un marco referente consultable y transparente que facilite la comparación entre la información de candidatos, considerando múltiples factores relevantes para el desempeño judicial que puedan ser de utilidad antes de la selección en una hurna.
 
 ## Metodología
 
