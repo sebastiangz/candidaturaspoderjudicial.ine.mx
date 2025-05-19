@@ -180,7 +180,7 @@ El sistema se implementa en Python utilizando Google Colab como entorno de desar
 
 ## Conclusiones y Próximos Pasos
 
-La selección de candidatos para el Poder Judicial de la Federación requiere un análisis exhaustivo que considere tanto la trayectoria profesional como la adecuación específica al cargo al que aspiran. Este proyecto demuestra cómo las técnicas avanzadas de procesamiento de lenguaje natural y análisis de datos pueden transformar este proceso, haciéndolo más objetivo, transparente y eficiente.
+La selección de candidatos para el Poder Judicial de la Federación requiere un análisis exhaustivo que considere tanto la trayectoria profesional como la adecuación específica al cargo al que aspiran. Este ejercicio sólo demuestra cómo las técnicas avanzadas de procesamiento de lenguaje natural y análisis de datos pueden transformar este proceso, haciéndolo más objetivo, transparente y eficiente.
 
 El sistema desarrollado integra exitosamente:
 - Información estructurada de bases de datos existentes (Excel)
