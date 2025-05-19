@@ -2,13 +2,13 @@
 
 ## Introducción
 
-Este proyecto desarrolla una metodología sistemática para evaluar la idoneidad de candidatos a puestos en el Poder Judicial de la Federación mediante el análisis automatizado de sus currículos vitae. El objetivo principal es proporcionar un marco objetivo y transparente que facilite la comparación entre candidatos, considerando múltiples factores relevantes para el desempeño judicial.
+Este proyecto desarrolla una metodología sistemática para evaluar la información para posible idoneidad de candidatos a puestos en el Poder Judicial de la Federación mediante el análisis automatizado de la información de sus currículos vitae consultable en el sitio: https://candidaturaspoderjudicial.ine.mx/. El objetivo principal es poner en uso las TICs y proporcionar un marco referente consultable y transparente que facilite la comparación entre la información de candidatos, considerando múltiples factores relevantes para el desempeño judicial que puedan ser de utilidad antes de la selección en una hurna.
 
 ## Metodología
 
 ### Enfoque General
 
-El análisis se basa en un modelo multidimensional que evalúa ocho aspectos fundamentales de los perfiles profesionales:
+El análisis se basa en un modelo multidimensional que evalúa ocho aspectos fundamentales de los perfiles profesionales de los candidatos:
 
 1. **Nivel Educativo** (20%)
 2. **Experiencia Judicial** (30%)
@@ -27,6 +27,7 @@ Estos criterios fueron seleccionados considerando los requisitos establecidos pa
 
 El proceso comienza con la extracción estructurada de información a partir de documentos PDF. Se implementó un sistema robusto de extracción que:
 
+- Seleccion de las URLs de CV para el Estado de Colima en el portal: https://candidaturaspoderjudicial.ine.mx/
 - Procesa documentos con diferentes formatos y estructuras
 - Identifica secciones relevantes mediante análisis lingüístico
 - Extrae entidades nombradas y datos estructurados
