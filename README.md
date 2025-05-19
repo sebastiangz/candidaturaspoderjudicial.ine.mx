@@ -127,43 +127,93 @@ Para cada candidato (152/153), el sistema genera un informe detallado que incluy
 Ejemplo de sección de desglose de puntuación:
 
 ```
-## Desglose de Puntuación
+## Desglose de Puntuación (Cargo: Magistrado)
 
-Nivel Educativo: 18.5 puntos (3.7/4, peso: 20%)
-Experiencia Judicial: 25.2 puntos (4/5, peso: 30%)
-Años de Experiencia: 12.8 puntos (12/15, peso: 15%)
-Otra Experiencia: 7.5 puntos (3/4, peso: 10%)
-Publicaciones: 8.0 puntos (4/5, peso: 10%)
-Idiomas: 3.5 puntos (2/3, peso: 5%)
-Certificaciones: 3.0 puntos (3/5, peso: 5%)
-Especialización: 4.0 puntos (4/5, peso: 5%)
+Nivel Educativo: 18.5 puntos (3.7/4, peso para Magistrado: 20%)
+Experiencia Judicial: 28.5 puntos (4.75/5, peso para Magistrado: 30%)
+Años de Experiencia: 13.5 puntos (12/15, peso para Magistrado: 15%)
+Otra Experiencia: 7.5 puntos (3/4, peso para Magistrado: 10%)
+Publicaciones: 8.0 puntos (4/5, peso para Magistrado: 10%)
+Idiomas: 3.5 puntos (2/3, peso para Magistrado: 5%)
+Certificaciones: 3.0 puntos (3/5, peso para Magistrado: 5%)
+Especialización: 4.0 puntos (4/5, peso para Magistrado: 5%)
 
-Puntuación Total: 82.5/100
+Puntuación Total: 86.5/100
 ```
 
-## Beneficios y Aplicaciones
+## Implementación Técnica
 
-El sistema proporciona múltiples ventajas para los procesos de selección judicial:
+### Arquitectura del Sistema
 
-1. **Objetividad**: Evaluación estandarizada basada en criterios explícitos
-2. **Transparencia**: Explicación detallada de cada componente de la puntuación
-3. **Eficiencia**: Procesamiento automatizado de grandes volúmenes de información
-4. **Comparabilidad**: Marco común para evaluar perfiles diversos
-5. **Adaptabilidad**: Ponderaciones configurables según las necesidades específicas
-6. **Perspectiva de Género**: Análisis de distribución por género para equilibrio
-7. **Identificación de Talento**: Detección de fortalezas específicas para roles especializados
+El sistema se implementa en Python utilizando Google Colab como entorno de desarrollo, lo que facilita:
 
-## Conclusiones
+1. El procesamiento distribuido de documentos PDF
+2. La integración con Google Drive para acceso a los archivos
+3. La utilización de bibliotecas especializadas de procesamiento de lenguaje natural
 
-La selección de candidatos para el Poder Judicial requiere un análisis exhaustivo de múltiples dimensiones profesionales. Esta metodología proporciona un marco sistemático que combina el procesamiento automatizado de información con criterios de evaluación fundamentados, facilitando decisiones más informadas y transparentes.
+### Componentes Principales
 
-El sistema no pretende reemplazar el juicio humano en la selección final, sino complementarlo con:
+1. **Módulo de Extracción de CVs**: 
+   - Utiliza PyMuPDF y PyPDF2 para realizar extracción de texto avanzada
+   - Implementa mecanismos de respaldo para manejar documentos con formatos complejos
+   - Aplica técnicas de limpieza y normalización para mejorar la calidad del texto extraído
+
+2. **Módulo de Procesamiento de Datos Estructurados**:
+   - Lee archivos Excel con información base de los candidatos
+   - Vincula cada candidato con su cargo y poder correspondiente
+   - Establece las ponderaciones específicas según el tipo de cargo
+
+3. **Módulo de Análisis Lingüístico**:
+   - Utiliza spaCy para reconocimiento de entidades nombradas
+   - Aplica NLTK para tokenización y análisis léxico
+   - Implementa modelos específicos para el español
+
+4. **Módulo de Puntuación y Evaluación**:
+   - Algoritmos de normalización relativa basados en el conjunto de datos
+   - Sistema de ponderación diferenciada según el cargo
+   - Mecanismos de explicabilidad que documentan cada paso del cálculo
+
+5. **Módulo de Visualización y Reportes**:
+   - Utiliza Matplotlib, Seaborn y WordCloud para visualizaciones avanzadas
+   - Genera visualizaciones específicas por cargo y categoría
+   - Implementa mecanismos de exportación a formatos estándar (Excel, Markdown)
+
+## Conclusiones y Próximos Pasos
+
+La selección de candidatos para el Poder Judicial de la Federación requiere un análisis exhaustivo que considere tanto la trayectoria profesional como la adecuación específica al cargo al que aspiran. Este proyecto demuestra cómo las técnicas avanzadas de procesamiento de lenguaje natural y análisis de datos pueden transformar este proceso, haciéndolo más objetivo, transparente y eficiente.
+
+El sistema desarrollado integra exitosamente:
+- Información estructurada de bases de datos existentes (Excel)
+- Datos no estructurados extraídos de currículos en formato PDF
+- Criterios de evaluación diferenciados por tipo de cargo
+- Visualizaciones comparativas que facilitan el análisis a diferentes niveles
+
+### Desafíos Superados
+
+Durante el desarrollo, se enfrentaron y superaron varios desafíos significativos:
+
+1. **Heterogeneidad de formatos**: Los currículos presentaban estructuras muy diversas, requiriendo algoritmos robustos de extracción.
+2. **Criterios diferenciados por cargo**: La implementación de ponderaciones variables según el tipo de posición judicial.
+3. **Vinculación entre bases de datos**: La necesidad de cruzar información entre archivos Excel y documentos PDF.
+4. **Análisis contextual**: La evaluación de la experiencia y formación respecto a los requisitos específicos de cada cargo.
+
+### Próximos Pasos
+
+El proyecto tiene varias direcciones potenciales de desarrollo:
+
+1. **Automatización completa**: Implementar un sistema que pueda procesar automáticamente nuevos candidatos a medida que se reciben sus currículos.
+2. **Análisis predictivo**: Desarrollar modelos que, basados en datos históricos, puedan predecir el desempeño futuro según el perfil del candidato.
+3. **Interfaz web interactiva**: Crear un portal que permita a los usuarios explorar los datos y visualizaciones de manera interactiva.
+4. **Expansión del modelo**: Adaptar el sistema para evaluar candidatos a otros cargos públicos o posiciones en diferentes poderes del Estado.
+
+Este sistema no pretende reemplazar el juicio humano en la selección final, sino complementarlo con:
 - Análisis objetivo de grandes volúmenes de información
 - Identificación de patrones no evidentes
 - Estandarización del proceso evaluativo
-- Documentación transparente de los criterios aplicados
+- Documentación transparente de los criterios aplicados según el cargo
 
 La aplicación de esta metodología contribuye a fortalecer la calidad, transparencia y equidad en los procesos de selección judicial, alineándose con las mejores prácticas internacionales de administración de justicia.
+
 
 ---
 
