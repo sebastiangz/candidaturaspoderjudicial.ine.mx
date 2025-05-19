@@ -84,7 +84,7 @@ Este gráfico muestra la contribución de cada criterio a la puntuación total, 
 
 #### Gráfico Radar de Competencias
 
-![Gráfico Radar](/_images/competencias-t5.png)
+![Gráfico Radar](/_images/competencias.png)
 
 Esta visualización permite comparar múltiples dimensiones simultáneamente entre los candidatos mejor calificados, facilitando la identificación de perfiles complementarios o especializados.
 
