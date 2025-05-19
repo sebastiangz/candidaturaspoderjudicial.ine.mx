@@ -161,4 +161,4 @@ La aplicación de esta metodología contribuye a fortalecer la calidad, transpar
 
 ---
 
-*Nota: Este documento describe la metodología y resultados del sistema de análisis de idoneidad. Las imágenes incluidas son representativas y la interprestación de los resultados es responsabilidad del usuario final. *
+*Nota: Este documento describe la metodología y resultados del sistema de análisis de idoneidad. Las imágenes incluidas son representativas y la interprestación de los resultados es responsabilidad del usuario final.*
