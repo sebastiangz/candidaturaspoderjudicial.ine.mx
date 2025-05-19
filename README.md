@@ -108,7 +108,7 @@ Visualización de las áreas de especialización más comunes entre los candidat
 
 ### 3. Informes Individuales
 
-Para cada candidato, el sistema genera un informe detallado que incluye:
+Para cada candidato (152/153), el sistema genera un informe detallado que incluye:
 
 - **Resumen Ejecutivo**: Perfil general, puntuación y ranking
 - **Desglose de Puntuación**: Explicación transparente de cada componente
